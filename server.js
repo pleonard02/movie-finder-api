@@ -8,7 +8,6 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT;
-const URL = `https://www.omdbapi.com/?apikey={API_KEY}`;
 
 // MIDDLEWARE
 app.use(express.json());
