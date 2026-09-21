@@ -12,7 +12,7 @@ export async function searchMovies(req, res) {
         const response = await axios.get('https://www.omdbapi.com/', {
             params: {
                 s: title,
-                apiKey: process.env.API_KEY
+                apiKey: process.env.OMDB_API_KEY
             }
         })
 
@@ -38,7 +38,7 @@ export async function getMovieById(req, res) {
         const response = await axios.get('https://www.omdbapi.com/', {
             params: {
                 i: id,
-                apiKey: process.env.API_KEY
+                apiKey: process.env.OMDB_API_KEY
             }
         });
 
