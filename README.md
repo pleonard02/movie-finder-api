@@ -107,7 +107,11 @@ http://localhost:3000/api/movies/tt0372784
 
 ## Error Handling
 
-The API uses `try...catch` blocks to handle errors from requests to the OMDb API. If an external API request fails, the server returns a `500 Internal Server Error` response with a JSON error message.
+The API handles several types of errors:
+
+A search request without the required title query parameter returns a 400 Bad Request.
+If OMDb cannot find a movie matching the requested title or IMDb ID, the API returns a 404 Not Found response with a JSON error message.
+The API uses try...catch blocks to handle errors during requests to the OMDb API. If an external API request fails, the server returns a 500 Internal Server Error response with a JSON error message.
 
 ## What I Practiced
 
